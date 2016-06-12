@@ -61,6 +61,17 @@ class ProductsController < ApplicationController
     end
   end
 
+  def buy
+    @product = Product.find(params[:id])
+    if @product.purchase == nil
+      @product.purchase = 1
+    else
+      @product.purchase += 1
+    end
+    @product.save
+    redirect_to @product.URL
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
@@ -69,6 +80,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:title, :purchase)
+      params.require(:product).permit(:title, :purchase, :price, :default_price, :URL)
     end
 end
