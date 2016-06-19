@@ -1,12 +1,12 @@
 <div id="container">
   <div id="detail">
-    <img src="/assets/<%= @product.id %>/1.png">
+    <img src="/assets/images/<%= @product.id %>/1.png">
     <div id="price">
       <span class="selling_price"> 판매가 <%= @product.price %> </span>
       <span class="defalut_price"> <%= @product.default_price %> </span>
     </div>
-    <img src="/assets/<%= @product.id %>/2.png">
-    <img src="/assets/<%= @product.id %>/3.png">
+    <img src="/assets/images/<%= @product.id %>/2.png">
+    <img src="/assets/images/<%= @product.id %>/3.png">
   </div>
   <div id="buy">
   <%= link_to '바로 구매', :action => 'buy' %> </div>
