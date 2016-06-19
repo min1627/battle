@@ -1,7 +1,7 @@
 <div id="container">
   <div id="detail">
-    <img src="/assets/<%= @product.id %><%= asset_path '1.png' %>">
-    <div id="price">
+  <%= image_tag (@product.id.to_s+'_1.png') %>
+  <div id="price">
       <span class="selling_price"> 판매가 <%= @product.price %> </span>
       <span class="defalut_price"> <%= @product.default_price %> </span>
     </div>
