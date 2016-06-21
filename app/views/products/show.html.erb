@@ -1,8 +1,11 @@
 <div id="container">
   <div id="detail">
   <%= image_tag (@product.id.to_s+'_1.png') %>
+  <div id="buy_button_top">
+    <a href="/products/<%= @product.id %>/buy">
   <%= image_tag (@product.id.to_s+'_2.png') %>
   <%= image_tag (@product.id.to_s+'_3.png') %> 
+</a>
   </div>
   <div id="buy">
   <%= link_to '바로 구매', :action => 'buy' %> </div>
